@@ -1,0 +1,11 @@
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    @media only screen and (max-width: 600px) {
+        font-size: 1rem;
+    };
+}

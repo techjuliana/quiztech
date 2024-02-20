@@ -1,0 +1,15 @@
+.enunciado {
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    max-width: 730px;
+    @media only screen and (max-width: 600px) {
+        font-size: 1.2rem;
+        max-width: 500px;
+    };
+}
