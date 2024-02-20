@@ -9,11 +9,11 @@ Visão Tecnica do que encontrará no projeto:
 - TypeScript
 
 ### Screen ⬇️
-<img src="" >
+<img src="https://raw.githubusercontent.com/techjuliana/quiztech/main/design/1.png" >
 
 
 ### Screen ⬇️
-<img src="" >
+<img src="https://raw.githubusercontent.com/techjuliana/quiztech/main/design/2.png" >
 
 
 ## Development
