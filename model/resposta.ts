@@ -1,47 +1,47 @@
 export default class RespostaModel {
-    #valor: string
-    #certa: boolean
-    #revelada: boolean
+  _valor: string;
+  _certa: boolean;
+  _revelada: boolean;
 
-    constructor(valor: string, certa: boolean, revelada = false) {
-        this.#valor = valor
-        this.#certa = certa
-        this.#revelada = revelada
-    }
+  constructor(valor: string, certa: boolean, revelada = false) {
+    this._valor = valor;
+    this._certa = certa;
+    this._revelada = revelada;
+  }
 
-    static certa(valor: string) {
-        return new RespostaModel(valor, true)
-    }
-    
-    static errada(valor: string) {
-        return new RespostaModel(valor, false)
-    }
+  static certa(valor: string) {
+    return new RespostaModel(valor, true);
+  }
 
-    get valor() {
-        return this.#valor
-    }
+  static errada(valor: string) {
+    return new RespostaModel(valor, false);
+  }
 
-    get certa() {
-        return this.#certa
-    }
-    
-    get revelada() {
-        return this.#revelada
-    }
+  get valor() {
+    return this._valor;
+  }
 
-    revelar() {
-        return new RespostaModel(this.#valor, this.#certa, true)
-    }
+  get certa() {
+    return this._certa;
+  }
 
-    static criarUsandoObjeto(obj: RespostaModel): RespostaModel {
-        return new RespostaModel(obj.valor, obj.certa, obj.revelada)
-    }
+  get revelada() {
+    return this._revelada;
+  }
 
-    paraObjeto() {
-        return {
-            valor: this.#valor,
-            certa: this.#certa,
-            revelada: this.#revelada
-        }
-    }
+  revelar() {
+    return new RespostaModel(this._valor, this._certa, true);
+  }
+
+  static criarUsandoObjeto(obj: RespostaModel): RespostaModel {
+    return new RespostaModel(obj.valor, obj.certa, obj.revelada);
+  }
+
+  paraObjeto() {
+    return {
+      valor: this._valor,
+      certa: this._certa,
+      revelada: this._revelada,
+    };
+  }
 }
