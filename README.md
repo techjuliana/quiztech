@@ -7,6 +7,7 @@ Desenvolvido para treinar as habilidades
 Visão Tecnica do que encontrará no projeto:
 - NEXT.JS
 - TypeScript
+- Responsividade
 
 ### Screen ⬇️
 <img src="https://raw.githubusercontent.com/techjuliana/quiztech/main/design/1.png" >
