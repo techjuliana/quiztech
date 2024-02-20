@@ -3,7 +3,7 @@ import Questionario from "../components/Questionario";
 import QuestaoModel from "../model/questao";
 import { useRouter } from "next/router";
 
-const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = "https://quiztech-omega.vercel.app/api";
 
 export default function Home() {
   const router = useRouter();
@@ -39,18 +39,18 @@ export default function Home() {
     setRespostasCertas(respostasCertas + (acertou ? 1 : 0));
   }
 
-  // function idProximaPergunta() {
-  //   const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
-  //   return idsDasQuestoes[proximoIndice];
-  // }
   function idProximaPergunta() {
-    if (questao && questao.id) {
-      const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
-      return idsDasQuestoes[proximoIndice];
-    } else {
-      return null;
-    }
+    const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
+    return idsDasQuestoes[proximoIndice];
   }
+  // function idProximaPergunta() {
+  //   if (questao && questao.id) {
+  //     const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
+  //     return idsDasQuestoes[proximoIndice];
+  //   } else {
+  //     return null;
+  //   }
+  // }
 
   function irPraProximoPasso() {
     const proximoId = idProximaPergunta();
