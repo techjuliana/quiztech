@@ -1,5 +1,24 @@
 import questoes from '../bancoDeQuestoes'
-export default function questoesProId(req, res) {
+export default function questoesProId(
+  req: { query: { id: string | number } },
+  res: {
+    status: (arg0: number) => {
+      (): any;
+      new (): any;
+      json: {
+        (arg0: {
+          id: number;
+          enunciado: string;
+          respondida: boolean;
+          acertou: boolean;
+          respostas: { valor: string; certa: boolean; revelada: boolean }[];
+        }): void;
+        new (): any;
+      };
+      send: { (): void; new (): any };
+    };
+  }
+) {
   const idSelecionado = +req.query.id;
 
   const unicaQuestaoOuNada = questoes.filter(
@@ -13,3 +32,4 @@ export default function questoesProId(req, res) {
     res.status(204).send();
   }
 }
+
