@@ -6,8 +6,10 @@ import { useRouter } from "next/router";
 export default function Resultado() {
   const router = useRouter();
 
-  const total = +router.query.total;
-  const certas = +router.query.certas;
+  // const total = +router.query.total;
+  // const certas = +router.query.certas;
+  const total = router.query.total != null ? +router.query.total : 0;
+  const certas = router.query.certas != null ? +router.query.certas : 0;
   const percentual = Math.round((certas / total) * 100);
 
   return (

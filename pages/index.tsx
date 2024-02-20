@@ -39,9 +39,17 @@ export default function Home() {
     setRespostasCertas(respostasCertas + (acertou ? 1 : 0));
   }
 
+  // function idProximaPergunta() {
+  //   const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
+  //   return idsDasQuestoes[proximoIndice];
+  // }
   function idProximaPergunta() {
-    const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
-    return idsDasQuestoes[proximoIndice];
+    if (questao && questao.id) {
+      const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
+      return idsDasQuestoes[proximoIndice];
+    } else {
+      return null;
+    }
   }
 
   function irPraProximoPasso() {
